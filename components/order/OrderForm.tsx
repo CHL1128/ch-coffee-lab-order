@@ -257,11 +257,11 @@ export function OrderForm({
               <div className="mt-4 grid min-w-0 gap-3 text-sm text-coffee-700 sm:grid-cols-3">
                 <div className="min-w-0">
                   <span className="font-medium text-coffee-900">單價</span>
-                  <p className="mt-1">NT$ {line.unitPrice.toLocaleString()}</p>
+                  <p className="mt-1">NT${line.unitPrice.toLocaleString()}</p>
                 </div>
                 <div className="min-w-0">
                   <span className="font-medium text-coffee-900">小計</span>
-                  <p className="mt-1">NT$ {line.subtotal.toLocaleString()}</p>
+                  <p className="mt-1">NT${line.subtotal.toLocaleString()}</p>
                 </div>
                 <div className="min-w-0">
                   <span className="font-medium text-coffee-900">目前選擇</span>
@@ -320,14 +320,14 @@ export function OrderForm({
                   {line.productName} {line.productTypeLabel} x {line.quantity}
                 </span>
                 <span className="font-medium text-coffee-900">
-                  NT$ {line.subtotal.toLocaleString()}
+                  NT${line.subtotal.toLocaleString()}
                 </span>
               </li>
             ))}
           </ul>
           <div className="mt-4 flex justify-between gap-3 text-lg font-bold text-coffee-900">
             <span>總計</span>
-            <span>NT$ {totalAmount.toLocaleString()}</span>
+            <span>NT${totalAmount.toLocaleString()}</span>
           </div>
         </div>
 

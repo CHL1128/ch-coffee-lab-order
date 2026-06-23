@@ -41,13 +41,13 @@ export function ProductCard({ product }: { product: Product }) {
           <div className="rounded-md border border-coffee-100 p-3">
             <div className="font-semibold text-coffee-900">熟豆半磅包</div>
             <div className="mt-1 text-sm text-coffee-700">
-              NT$ {product.bean_price.toLocaleString()} / 半磅
+              NT${product.bean_price.toLocaleString("zh-TW")} / 半磅
             </div>
           </div>
           <div className="rounded-md border border-coffee-100 p-3">
             <div className="font-semibold text-coffee-900">濾掛包</div>
             <div className="mt-1 text-sm text-coffee-700">
-              NT$ {product.drip_price.toLocaleString()} / 包
+              NT${product.drip_price.toLocaleString("zh-TW")} / 包
             </div>
           </div>
         </div>
