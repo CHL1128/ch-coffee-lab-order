@@ -11,7 +11,7 @@ type CartItemInput = {
 };
 
 type ProductPriceRow = {
-  id: string;
+  id: string | number;
   is_active: boolean;
   bean_price: number;
   drip_price: number;
@@ -94,7 +94,9 @@ export async function createOrder(input: {
   const orderItemsWithoutOrderId: OrderItemDraft[] = [];
 
   for (const item of items) {
-    const product = (products as ProductPriceRow[]).find((row) => row.id === item.productId);
+    const product = (products as ProductPriceRow[]).find(
+      (row) => String(row.id) === item.productId
+    );
 
     if (!product || !product.is_active) {
       return { ok: false, message: "部分商品目前無法購買，請重新整理後再試。" };
@@ -102,7 +104,7 @@ export async function createOrder(input: {
 
     const unitPrice = getUnitPrice(product, item.productType);
     orderItemsWithoutOrderId.push({
-      product_id: product.id,
+      product_id: item.productId,
       product_type: item.productType,
       quantity: item.quantity,
       unit_price: unitPrice,

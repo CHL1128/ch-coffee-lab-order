@@ -32,7 +32,7 @@ export default async function ProductDetailPage({
 
         <div className="grid gap-8 p-6 lg:grid-cols-[1fr_320px] lg:p-8">
           <section>
-            <p className="text-sm font-semibold text-coffee-700">Coffee Bean</p>
+            <p className="text-sm font-semibold text-coffee-700">咖啡豆商品</p>
             <h1 className="mt-2 text-3xl font-bold text-coffee-900">{product.name}</h1>
 
             <dl className="mt-6 grid gap-4 text-coffee-700 sm:grid-cols-3">
@@ -64,13 +64,13 @@ export default async function ProductDetailPage({
               <div className="rounded-md bg-coffee-50 p-4">
                 <p className="font-semibold text-coffee-900">熟豆半磅包</p>
                 <p className="mt-1 text-2xl font-bold text-coffee-900">
-                  NT$ {product.bean_price.toLocaleString()}
+                  NT${product.bean_price.toLocaleString("zh-TW")}
                 </p>
               </div>
               <div className="rounded-md bg-coffee-50 p-4">
                 <p className="font-semibold text-coffee-900">濾掛包</p>
                 <p className="mt-1 text-2xl font-bold text-coffee-900">
-                  NT$ {product.drip_price.toLocaleString()}
+                  NT${product.drip_price.toLocaleString("zh-TW")}
                 </p>
               </div>
             </div>
