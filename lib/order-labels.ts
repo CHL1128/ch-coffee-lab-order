@@ -18,5 +18,5 @@ export function getOrderStatusLabel(status: OrderStatus) {
 }
 
 export function formatCurrency(amount: number) {
-  return `NT$ ${amount.toLocaleString("zh-TW")}`;
+  return `NT$${amount.toLocaleString("zh-TW")}`;
 }
